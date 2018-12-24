@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>编辑器</title>
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+    html {
+        font: 400 1em/1.5"Open Sans", sans-serif;
+        background-color: #fff;
+        color: #666;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+    body {
+        margin: 0 auto;
+        padding: 0em;
+    }
+    body div.editr {
+	height: 100%;
+	width: 100%;
+    }
+    </style>
+    <!-- Editr style -->
+    <link rel="stylesheet" href="../editr/editr.css">
+</head>
+
+<body>
+
+<div class="editr editr--light animated fadeInUp editr-view--single editr--loaded" data-item="flat-ui" data-files-html="test.html" data-files-css="test.css">
+    <script src="assets/jquery.min.js"></script>
+
+    <script src="assets/ace.js"></script>
+    <script src="assets/ext-emmet.js"></script>
+    <script src="../editr/libs/ext.emmet.js"></script>
+    <script src="../editr/libs/parser.coffeescript.js"></script>
+    <script src="../editr/libs/parser.less.js"></script>
+    <script src="../editr/editr.js"></script>
+
+    <script>
+    $('.editr').each(function() {
+        new Editr({
+            el: this,
+            path: 'projects',
+            view: 'single',
+            gistProxyURL: '../editr/libs/proxy.gist.php',
+            callback: function(editr) {}
+        });
+    });
+    </script>
+</body>
+
+</html>

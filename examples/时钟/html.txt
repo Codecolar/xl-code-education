@@ -1,0 +1,35 @@
+<div class="window cut">
+  <div class="container">
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+  </div>
+</div>
+<div class="window cut-black">
+  <div class="container">
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+    <div class="tick"><div class="letter">I</div></div>
+    <div class="tick"><div class="letter">O</div></div>
+  </div>
+</div>
+<div class="outside-letter t">T</div>
+<div class="outside-letter c">C</div>
+<div class="outside-letter k">K</div>

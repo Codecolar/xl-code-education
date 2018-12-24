@@ -1,0 +1,318 @@
+body {
+  background: #3F445C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+  opacity: 0;
+  -webkit-animation: flash .4s 1.5s;
+          animation: flash .4s 1.5s;
+}
+
+.camera {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(to left, #4E8DC1, #569BD5);
+}
+.camera:before, .camera:after {
+  content: "";
+  display: block;
+  background: #5EA8E7;
+  height: 68%;
+  width: 32px;
+  position: absolute;
+  bottom: 0;
+}
+.camera:after {
+  right: 0;
+  background: #447CB1;
+}
+.camera .upper-body {
+  background: #ECF6FF;
+  height: 95px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  border-bottom: 2px solid #4a86b7;
+}
+.camera .upper-body:after, .camera .upper-body:before {
+  content: "";
+  width: 12px;
+  height: 35px;
+  background: #5BA4E1;
+  position: absolute;
+  bottom: 5px;
+  left: -3px;
+  z-index: 1;
+}
+.camera .upper-body:after {
+  left: auto;
+  right: -3px;
+  background: #5090C6;
+}
+.camera .upper-body .mirrors .mirror-left,
+.camera .upper-body .mirrors .mirror-right {
+  position: absolute;
+  background: #B8DCF9;
+}
+.camera .upper-body .mirrors .mirror-right {
+  top: 25%;
+  left: 75%;
+  width: 30px;
+  height: 25px;
+  border-right: 30px solid;
+  border-left: 30px solid;
+  border-top: 12px solid;
+  border-bottom: 12px solid;
+  border-color: #1D3667;
+}
+.camera .upper-body .mirrors .mirror-right:before, .camera .upper-body .mirrors .mirror-right:after {
+  content: '';
+  background: #61B0F1;
+  width: 300%;
+  height: 12px;
+  position: absolute;
+  top: -24px;
+  left: -30px;
+}
+.camera .upper-body .mirrors .mirror-right:after {
+  top: auto;
+  bottom: -24px;
+}
+.camera .upper-body .mirrors .mirror-left {
+  top: 40%;
+  left: 25%;
+  width: 22px;
+  height: 15px;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  border-top: 7px solid;
+  border-bottom: 7px solid;
+  border-color: #1D3667;
+}
+.camera .upper-body .circle {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: #FF7878;
+  border-radius: 50%;
+  top: 14px;
+  left: 50%;
+}
+.camera .divider {
+  height: 16px;
+  width: 55%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #D5E3ED, rgba(213, 227, 237, 0.2));
+}
+.camera .settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 20px;
+  background: #3F445C;
+}
+.camera .settings:before {
+  content: "";
+  height: 6px;
+  width: 20px;
+  background: #B8DCF9;
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  display: block;
+  animation: click .5s 1s alternate-reverse;
+}
+.camera .settings .iso,
+.camera .settings .ss {
+  position: relative;
+  background: #5BA4E1;
+  height: 18px;
+  width: 65px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 2px;
+  background-image: repeating-linear-gradient(90deg, #5BA4E1, #5BA4E1 3px, #B8DCF9 2px, #B8DCF9 5px);
+  background-position-y: 4px;
+  background-repeat: repeat-x;
+  background-size: 100% 58%;
+}
+.camera .settings .iso:after,
+.camera .settings .ss:after {
+  content: '';
+  background: black;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  opacity: .2;
+}
+.camera .settings .iso:before {
+  content: '';
+  background: white;
+  position: absolute;
+  height: 2px;
+  left: -53px;
+  width: 50%;
+  top: -2px;
+}
+.camera .settings .ss {
+  height: 12px;
+  width: 55px;
+  background-position-y: 0;
+  background-size: 100%;
+  box-shadow: 0 6px 0 0px #5BA4E1;
+}
+.camera .settings .ss:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #4780B0;
+  top: 10px;
+}
+.camera .lens {
+  position: absolute;
+  left: 48%;
+  top: 48%;
+  width: 80px;
+  height: 80px;
+  background: #1D3667;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #B8DCF9, 0 0 0 40px #1D3667, 0 0 0 50px #D0DDE7, 0 0 0 65px #F7F8F9, 5px 6px 0 65px rgba(4, 4, 4, 0.2);
+  z-index: 3;
+}
+.camera .lens-shadow {
+  -webkit-transform: rotate(45deg) translate(-50%, -50%);
+          transform: rotate(45deg) translate(-50%, -50%);
+  position: absolute;
+  width: 157px;
+  height: 205px;
+  left: 47%;
+  top: 86%;
+  z-index: 2;
+  background: linear-gradient(to right, rgba(51, 51, 51, 0.3), transparent);
+}
+.camera .string-left,
+.camera .string-right {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  width: 35px;
+  height: 25px;
+}
+.camera .string-left:before, .camera .string-left:after,
+.camera .string-right:before,
+.camera .string-right:after {
+  content: '';
+  position: absolute;
+}
+.camera .string-left {
+  left: -22px;
+  background: #B8DCF9;
+  border-radius: 20px 0 0 20px;
+}
+.camera .string-left:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3F445C;
+  top: 25%;
+  left: 20%;
+}
+.camera .string-right {
+  right: -22px;
+  background: #B8DCF9;
+  border-radius: 0 20px 20px 0;
+}
+.camera .string-right:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3F445C;
+  top: 25%;
+  right: 20%;
+}
+.camera .middle-body {
+  position: absolute;
+  top: 58%;
+  left: 31%;
+  width: 2px;
+  height: 2px;
+  background: #B8DCF9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #B8DCF9, 0 0 0 15px #1D3667, -50px -75px 0 10px #B8DCF9, -50px -75px 0 15px #1D3667, 50px -160px 0 5px #B8DCF9, 50px -160px 0 9px #1D3667;
+}
+.camera .lower-body {
+  background: #E3F1FC;
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+  width: 100%;
+  z-index: 1;
+}
+.camera .lower-body:after {
+  content: '';
+  background: #E3F1FC;
+  height: 15px;
+  width: 6px;
+  position: absolute;
+  top: -15px;
+  right: 0;
+}
+
+.leica {
+  margin-top: 80px;
+  font-family: 'Pacifico';
+  font-size: 50px;
+  color: #B8DCF9;
+  z-index: 11;
+}
+
+.credits {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Source Code Pro';
+  z-index: 11;
+}
+.credits a {
+  color: #fff;
+}
+
+@-webkit-keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes click {
+  to {
+    height: 0;
+  }
+}
+@keyframes click {
+  to {
+    height: 0;
+  }
+}

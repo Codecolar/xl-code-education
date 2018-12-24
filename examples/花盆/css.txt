@@ -1,0 +1,173 @@
+:root {
+  --box-size: 400px;
+  --pot-bg: #e36a00;
+  --pot-bg-1: #f58d1d;
+  --pot-bg-2: #c14800;
+  --pot-bg-3: #b03700;
+  --sand-bg: #452000;
+  --sand-bg-1: #503000;
+  --stem-bg: #11961a;
+  --stem-bg-1: #008509;
+  --pot-width: calc(var(--box-size) * 0.2);
+  --pot-height: calc(var(--box-size) * 0.35);
+  --pot-side-width: calc(var(--box-size) * 0.1);
+  --sand-width: calc(var(--box-size) * 0.4);
+  --sand-height: calc(var(--box-size) * 0.2);
+  --stone-width: calc(var(--sand-width) * 0.20);
+  --stone-height: calc(var(--sand-height) * 0.25);
+  --stem-width: calc(var(--box-size) * 0.02);
+  --stem-height: calc(var(--box-size) * 0.35);
+  --leaf-width: calc(var(--box-size) * 0.2);
+  --leaf-height: calc(var(--box-size) * 0.45);
+}
+
+html, body, .c {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.box {
+  background: black;
+  width: var(--box-size);
+  height: var(--box-size);
+  position: relative;
+}
+
+.pot {
+  background-image: linear-gradient(to right, var(--pot-bg-1) 25%, var(--pot-bg) 25%);
+  width: var(--pot-width);
+  height: var(--pot-height);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pot:before,
+.pot:after {
+  content: '';
+  border-bottom: none;
+  display: block;
+  position: absolute;
+}
+
+.pot:before {
+  border-top: solid var(--pot-height) var(--pot-bg-1);
+  border-left: solid var(--pot-side-width) transparent;
+  border-right: none;
+  left: calc(var(--pot-side-width) * -1);
+}
+
+.pot:after {
+  border-left: none;
+  border-top: solid var(--pot-height) var(--pot-bg);
+  border-right: solid var(--pot-side-width) transparent;
+  right: calc(var(--pot-side-width) * -1);
+}
+
+.sand {
+  background-image: linear-gradient(to right, var(--pot-bg-3) 25%, var(--pot-bg-2) 25%);
+  width: var(--sand-width);
+  height: var(--sand-height);
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  bottom: calc(var(--pot-height) - 10%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.sand:before {
+  content: '';
+  background-image: linear-gradient(to top right, var(--sand-bg) 65%, var(--sand-bg-1) 65%);
+  width: 90%;
+  height: 90%;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  bottom: calc(var(--sand-height) * -0.15);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stone {
+  background-image: radial-gradient(at 30% 70%, #d8d8d8 30%, #c2c2c2 30%, #c2c2c2 60%, #afafaf 60%);
+  background-position: right top;
+  position: absolute;
+  border-radius: 50% / 80% 80% 40% 40%;
+  box-shadow: calc(var(--stone-width) * 0.1) calc(var(--stone-height) * -0.15) rgba(0, 0, 0, 0.5);
+}
+
+.stone:nth-child(1) {
+  width: var(--stone-width);
+  height: var(--stone-height);
+  top: 40%;
+  left: 45%;
+}
+
+.stone:nth-child(2) {
+  width: calc(var(--stone-width) * 0.6);
+  height: calc(var(--stone-height) * 0.6);
+  top: 55%;
+  left: 35%;
+  box-shadow: calc(var(--stone-width) * 0.6 * 0.1) calc(var(--stone-height) * 0.6 * -0.15) rgba(0, 0, 0, 0.5);
+}
+
+.stone:nth-child(3) {
+  width: calc(var(--stone-width) * 0.3);
+  height: calc(var(--stone-height) * 0.3);
+  top: 65%;
+  left: 48%;
+  box-shadow: calc(var(--stone-width) * 0.3 * 0.1) calc(var(--stone-height) * 0.3 * -0.15) rgba(0, 0, 0, 0.5);
+}
+
+.stem {
+  background-color: var(--stem-bg);
+  width: var(--stem-width);
+  height: var(--stem-height);
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  border-radius: 50% / 20% 20% 3% 3%;
+  transform: translateX(-100%);
+  animation: stem-grow 1s;
+}
+
+@keyframes stem-grow {
+  0%   { height: 0; }
+  100% { height: var(--stem-height); }
+}
+
+.leaf, .leaf-2 {
+  background-color: var(--stem-bg);
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 70%;
+  border-radius: 80% / 80%;
+  animation: 1s leaf-grow 1s forwards;
+}
+
+.leaf {
+  right: 57%;
+  transform: rotateY(180deg) rotateZ(45deg) scaleX(-1);
+}
+
+.leaf-2 {
+  left: 55%;
+  transform: rotateZ(45deg);
+}
+
+@keyframes leaf-grow {
+  0%   { width: 0; height: 0; bottom: 70%; }
+  100% { width: var(--leaf-width); height: var(--leaf-height); bottom: 60%; }
+}

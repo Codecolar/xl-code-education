@@ -1,0 +1,23 @@
+<div class="camera">
+  <div class="upper-body">
+    
+    <div class="mirrors">
+      <div class="mirror-left"></div>
+      <div class="mirror-right"></div>
+    </div>
+    <div class="divider"></div>
+    <div class="settings">
+      <div class="iso"></div>
+      <div class="ss"></div>
+    </div>
+    
+    <div class="circle"></div>
+  </div>
+  
+  <div class="string-left"></div>
+  <div class="string-right"></div>
+  <div class="lens"></div>
+  <div class="lens-shadow"></div>
+  <div class="middle-body"></div>
+  <div class="lower-body"></div>
+</div>

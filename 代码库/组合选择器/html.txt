@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>章鱼</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+	    <div class="title">
+	        大西洋巨型章鱼
+	    </div>
+	    
+	    <div class="featured">
+	        <h1>关于章鱼的小知识</h1>
+	        <ul>
+	            <li><span class="feat-title"> 寿命: </span> 5 年</li>
+	            <li><span class="feat-title"> 重量: </span> 50 kg! </li>
+	            <li><span class="feat-title"> 日常饮食: </span>其他的海洋生物，包括海蜗牛，螃蟹，龙虾等</li>
+	        </ul>
+	          
+	    </div>
+	    
+	    <div class="content">
+	        <h1>章鱼为什么有趣?</h1>
+	        <h2>智力</h2>
+	        <p>
+	            章鱼特别聪明，在实验室中能运用它们的智力解决一些复杂问题。他们会玩玩具，也是高超的逃脱高手，他们能记得他们见过的人，并产生相关的情绪。
+	        </p>
+	        
+	        <h2>变色</h2>
+	        <p>
+	            变色龙不是唯一具有变色皮肤的动物！章鱼能够随意改变它们皮肤的颜色和质地。 这使他们成为伟大的伪装艺术家，也使他们很难被找到并成为危险的食肉动物！
+	        </p>
+	        
+	        <h2>生物特征</h2>
+	        <p>
+	            章鱼有三个心脏，八个手臂，手臂上的吸盘，高度发达的中枢神经系统，喙和虹吸管。
+	       </p>
+	       <p>
+	            虹吸管用于移动和喷射墨水，它也往自己的鳃上喷水以便呼吸水中的氧气。
+	       </p>
+	       <p>
+	            章鱼的两颗心脏将血液抽到鳃上，而第三条则将血液抽到身体的其他部位。
+	       </p>
+	       <p>
+	            章鱼有手臂，而不是触手！ 每只手臂都覆盖着非常敏感的吸盘，将触觉和味觉信息传回大脑。 章鱼可以用他的吸盘感受和品尝！
+	        </p>
+	        
+	    </div>
+	    
+	    <div class="footer">
+	        <p>
+	            想了解更多关于章鱼的知识吗？通过下面的链接可以了解更多:<br>
+	            <a href="http://bioweb.uwlax.edu/bio203/s2012/kalupa_juli/Index.htm">
+	                The Giant Pacific Octopus by Julie Kalupa 
+	            </a>
+	            from the University of Wisconsin - La Crosse
+	            
+	        </p>
+	    </div>
+	</body>
+</html>
